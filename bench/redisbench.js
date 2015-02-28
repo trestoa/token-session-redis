@@ -1,5 +1,5 @@
 var P = require('bluebird');
-var session = require('express-session');
+var session = require('express-token-session');
 var RedisStore = require('../')(session);
 
 var count = 100000;
