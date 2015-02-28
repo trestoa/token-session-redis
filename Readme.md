@@ -1,10 +1,8 @@
-# Token Session Redis
-
-connect-redis is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
+token-session-redis is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
 
 ## Installation
 
-    $ npm install connect-redis
+    $ npm install token-session-redis
 
 ### A note for Express 3.x users
 
