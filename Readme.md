@@ -1,4 +1,4 @@
-# Connect Redis
+# Token Session Redis
 
 connect-redis is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
 
@@ -8,9 +8,9 @@ connect-redis is a Redis session store backed by [node_redis](http://github.com/
 
 ### A note for Express 3.x users
 
-In order to use the latest `connect-redis` you also have to use [`express-session`](https://github.com/expressjs/session) instead of the default connect `session` middleware.
+In order to use the latest `token-session-redis` you also have to use [`token-session`](https://github.com/kleiinnn/token-session) instead of the default connect `session` middleware.
 
-    $ npm install express-session
+    $ npm install token-session
 
 Then follow the usage instructions below.
 
@@ -37,8 +37,8 @@ Any options not included in this list will be passed to the redis `createClient(
 
 Pass the `express-session` store into `connect-redis` to create a `RedisStore` constructor.
 
-    var session = require('express-session');
-    var RedisStore = require('connect-redis')(session);
+    var session = require('token-session');
+    var RedisStore = require('token-session-redis')(session);
 
     app.use(session({
         store: new RedisStore(options),
@@ -64,8 +64,6 @@ app.use(function (req, res, next) {
   next() // otherwise continue
 })
 ```
-
-If you want to retry, here is [another option](https://github.com/expressjs/session/issues/99#issuecomment-63853989).
 
 # License
 

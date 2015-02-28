@@ -1,4 +1,8 @@
+3.0.0
+==========
+ * First version
 
+# History of the [source repo](https://github.com/tj/connect-redis):
 2.2.0 / 2015-01-26
 ==================
 
